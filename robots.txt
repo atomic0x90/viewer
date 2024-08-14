@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /viewer/assets/
+
+Sitemap: https://atomic0x90.github.io/viewer/sitemap.xml

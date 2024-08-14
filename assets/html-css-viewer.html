@@ -1,0 +1,82 @@
+---
+---
+<!-- html-css-viewer.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-T706Z1X36P"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-T706Z1X36P');
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/main.css">
+	{% include html/icon.html %}
+	<title>HTML CSS viewer online</title>
+	<meta name="description" content="HTML CSS 뷰어 온라인 | HTML CSS viewer online">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+	{% include html/adsense-head.html %}
+
+</head>
+<body>
+	<!-- main -->
+	<div id="main">
+		<div id="main-left"></div>
+		<div id="main-center">
+			<div id="main-top">
+				{% include html/main-top.html %}
+			</div>
+
+			<div>
+				<span class="comment">
+					This is an HTML and CSS viewer. Enter your HTML and CSS code on the left side.<br>
+					You will see the formatted output in real-time on the right side.<br><br>
+					HTML, CSS 뷰어입니다. 왼쪽에 HTML, CSS 문법을 입력하면 오른쪽에 실시간으로 표시됩니다. <br><br>
+				</span>
+			</div>
+
+			<div style="display:flex;">
+				<div style="flex:1;">
+					<div style="display:grid;">
+						<span style="text-align: center;">Enter HTML</span>
+						<textarea id="html-input" placeholder="Enter your HTML here..." valu=""></textarea>
+					</div>
+					<div id="css-area" style="display:grid;">
+						<span style="text-align: center;">Enter CSS</span>
+						<textarea id="css-input" placeholder="Enter your CSS here..." valu=""></textarea>
+					</div>
+				</div>
+				<div style="flex:1;">
+					<div style="display:grid;">
+						<span style="text-align: center;">Viewer</span>
+						<div id="html-css-output"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="main-right"></div>
+	</div><!-- main end -->
+	
+	<!-- footer -->
+	<div id="footer">
+		{% include html/footer.html %}
+	</div><!-- footer end -->
+
+
+<script>
+{% include js/navbar.js %}
+{% include js/html-css-view.js %}
+</script>
+
+
+</body>
+
+</html>
+

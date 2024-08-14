@@ -1,0 +1,75 @@
+---
+---
+<!-- markdown-viewer.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-3NFJX4YVWY"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-3NFJX4YVWY');
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/main.css">
+	{% include html/icon.html %}
+	<title>Markdown viewer online</title>
+	<meta name="description" content="마크다운 뷰어 온라인 | Markdown viewer online">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+	{% include html/adsense-head.html %}
+
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+	<!-- main -->
+	<div id="main">
+		<div id="main-left"></div>
+		<div id="main-center">
+			<div id="main-top">
+				{% include html/main-top.html %}
+			</div>
+
+			<div>
+				<span class="comment">
+					This is a Markdown viewer. Enter your Markdown code on the left side.<br>
+					You will see the formatted output in real-time on the right side.<br><br>
+					마크다운 뷰어입니다. 왼쪽에 마크다운 문법을 입력하면 오른쪽에서 실시간으로 표시됩니다. <br><br>
+				</span>
+			</div>
+
+			<div style="display:flex;">
+				<span style="flex:1; text-align: center;">Enter markdown</span>
+				<span style="flex:1; text-align: center;">Viewer</span>
+			</div>
+
+			<div style="display:flex;">
+				<textarea id="markdown" placeholder="Enter your markdown here..."></textarea>
+			
+				<div id="html-output"></div>
+			</div>
+		</div>
+
+		<div id="main-right"></div>
+	</div><!-- main end -->
+	
+	<!-- footer -->
+	<div id="footer">
+		{% include html/footer.html %}
+	</div><!-- footer end -->
+
+
+<script>
+{% include js/navbar.js %}
+{% include js/markdown-to-html.js %}
+</script>
+
+
+</body>
+
+</html>
+
